@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://caxp46vei8bne"]
+
+[ext_resource type="Texture2D" uid="uid://yerjahql4k5n" path="res://Sprites/Background.png" id="1_d1fyt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqs7v"]
+size = Vector2(20, 481)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oujv"]
+size = Vector2(680.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1enp"]
+size = Vector2(674, 20)
+
+[node name="Environment" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_d1fyt")
+centered = false
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(-10, 240.5)
+shape = SubResource("RectangleShape2D_bqs7v")
+debug_color = Color(0.826749, 0.317264, 0.613871, 0.42)
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(661, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(-10, 240.5)
+shape = SubResource("RectangleShape2D_bqs7v")
+debug_color = Color(0.826749, 0.317264, 0.613871, 0.42)
+
+[node name="TopWall" type="StaticBody2D" parent="."]
+position = Vector2(623, -22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall"]
+position = Vector2(-301.25, 12)
+shape = SubResource("RectangleShape2D_8oujv")
+
+[node name="DeathZone" type="Area2D" parent="."]
+position = Vector2(7, 499)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(315, -8)
+shape = SubResource("RectangleShape2D_l1enp")
+debug_color = Color(0.660007, 0.511606, 0.154638, 0.42)

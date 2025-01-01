@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm4xx8ydf3wqm"]
+
+[ext_resource type="Texture2D" uid="uid://ca6oef2gvb7r" path="res://Sprites/BlueBlock.png" id="1_84r4w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hylv3"]
+size = Vector2(80, 24)
+
+[node name="block" type="StaticBody2D"]
+position = Vector2(77, 143)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_84r4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hylv3")
