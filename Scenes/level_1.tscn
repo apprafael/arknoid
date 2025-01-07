@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwph852upvovn"]
+[gd_scene load_steps=11 format=3 uid="uid://cwph852upvovn"]
 
 [ext_resource type="PackedScene" uid="uid://caxp46vei8bne" path="res://Scenes/environment.tscn" id="1_vqmxk"]
 [ext_resource type="PackedScene" uid="uid://fb6i2cwkem7q" path="res://Scenes/character_body_2d.tscn" id="2_4xsru"]
 [ext_resource type="PackedScene" uid="uid://cc141cqmwlg8c" path="res://Scenes/ball.tscn" id="3_eycgw"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="3_kb0ly"]
 [ext_resource type="PackedScene" uid="uid://cm4xx8ydf3wqm" path="res://Scenes/block.tscn" id="4_ukkly"]
 [ext_resource type="Texture2D" uid="uid://b2a8a5xs2ouh4" path="res://Sprites/RedBlock.png" id="5_8n4em"]
 [ext_resource type="Texture2D" uid="uid://c0yr833n8m7i2" path="res://Sprites/PurpleBlock.png" id="6_pshrq"]
@@ -17,6 +18,7 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_4xsru")]
 position = Vector2(320, 437)
+script = ExtResource("3_kb0ly")
 
 [node name="Ball" parent="." instance=ExtResource("3_eycgw")]
 position = Vector2(320, 408)
