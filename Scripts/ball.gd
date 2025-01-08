@@ -7,7 +7,7 @@ var started = false
 
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept") and !started:
+	if Input.is_action_just_pressed("ui_accept") and !GameManager.started:
 		playGame()
 
 	var collision = move_and_collide(velocity*delta)
@@ -16,5 +16,5 @@ func _physics_process(delta: float) -> void:
 	
 
 func playGame():
-	started = true
+	GameManager.started = true
 	velocity = Vector2(angle.pick_random(), y_speed)
