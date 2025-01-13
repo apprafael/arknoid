@@ -22,7 +22,6 @@ centered = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
 position = Vector2(-10, 240.5)
 shape = SubResource("RectangleShape2D_bqs7v")
-debug_color = Color(0.826749, 0.317264, 0.613871, 0.42)
 
 [node name="RightWall" type="StaticBody2D" parent="."]
 position = Vector2(661, -1)
@@ -30,7 +29,6 @@ position = Vector2(661, -1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
 position = Vector2(-10, 240.5)
 shape = SubResource("RectangleShape2D_bqs7v")
-debug_color = Color(0.826749, 0.317264, 0.613871, 0.42)
 
 [node name="TopWall" type="StaticBody2D" parent="."]
 position = Vector2(623, -22)
