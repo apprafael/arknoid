@@ -8,6 +8,7 @@ radius = 16.0
 
 [node name="PowerUP" type="CharacterBody2D"]
 position = Vector2(276, 0)
+collision_layer = 8
 script = ExtResource("2_clrn0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
