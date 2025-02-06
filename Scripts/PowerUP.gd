@@ -12,6 +12,7 @@ func _physics_process(delta: float) -> void:
 	if collision != null:
 		var collision_object = collision.get_collider()
 		if "Player" in collision_object.name:
+			GameManager.on_powerup.emit()
 			queue_free()
 	
 	

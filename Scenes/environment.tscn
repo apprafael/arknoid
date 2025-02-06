@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://caxp46vei8bne"]
+[gd_scene load_steps=7 format=3 uid="uid://caxp46vei8bne"]
 
 [ext_resource type="Texture2D" uid="uid://yerjahql4k5n" path="res://Sprites/Background.png" id="1_d1fyt"]
-[ext_resource type="Script" path="res://Scenes/environment.gd" id="1_jir7d"]
+[ext_resource type="Script" path="res://Scripts/environment.gd" id="1_jir7d"]
+[ext_resource type="PackedScene" uid="uid://bjls5qrytekkl" path="res://Scenes/power_up.tscn" id="3_y84t5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqs7v"]
 size = Vector2(20, 481)
@@ -58,6 +59,8 @@ debug_color = Color(0.660007, 0.511606, 0.154638, 0.42)
 [node name="TimerReset" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="PowerUP" parent="TimerReset" instance=ExtResource("3_y84t5")]
 
 [connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
 [connection signal="timeout" from="TimerReset" to="." method="_on_timer_reset_timeout"]
