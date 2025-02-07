@@ -2,19 +2,13 @@ extends Node2D
 
 @onready var time_reset = $TimerReset
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_death_zone_body_entered(body: Node2D) -> void:
 	if body.name == "Ball":
-		time_reset.start()
+		if GameManager.lives > 1:
+			GameManager.lives -= 1
+			body.reset_position()
+		else:
+			time_reset.start()
 	else:
 		body.queue_free()
 

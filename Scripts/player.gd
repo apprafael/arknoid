@@ -18,7 +18,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	move_and_collide(velocity*delta)
+	if GameManager.started:
+		move_and_collide(velocity*delta)
 
 func spawn_bullet():
 	var left_shoot_instance = bullet_scene.instantiate()

@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 
 func playGame():
 	GameManager.started = true
-	velocity = Vector2(angle.pick_random(), y_speed)			
+	velocity = Vector2(angle.pick_random(), y_speed)
 
 func spawnItem(position_item: Vector2):
 	if powerup_spawn_timer.is_stopped():
@@ -30,3 +30,9 @@ func spawnItem(position_item: Vector2):
 			item.position = position_item
 			get_parent().add_child(item)
 			powerup_spawn_timer.start()
+
+func reset_position() -> void:
+	var player = get_parent().get_node("Player")
+	position = player.position
+	velocity = Vector2(0,0)
+	GameManager.started = false
