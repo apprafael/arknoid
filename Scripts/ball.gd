@@ -16,6 +16,7 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.bounce(collision.get_normal())
 		if "block" in collision.get_collider().name:
 			collision.get_collider().queue_free()
+			GameManager.add_score(5)
 			spawnItem(collision.get_position())
 	
 

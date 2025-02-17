@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://caxp46vei8bne"]
+[gd_scene load_steps=7 format=3 uid="uid://caxp46vei8bne"]
 
 [ext_resource type="Texture2D" uid="uid://yerjahql4k5n" path="res://Sprites/Background.png" id="1_d1fyt"]
 [ext_resource type="Script" path="res://Scripts/environment.gd" id="1_jir7d"]
+[ext_resource type="PackedScene" uid="uid://d1vr8prijka5v" path="res://Scenes/hud.tscn" id="3_cedcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqs7v"]
 size = Vector2(20, 481)
@@ -18,6 +19,10 @@ script = ExtResource("1_jir7d")
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_d1fyt")
 centered = false
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Node2D" parent="CanvasGroup" instance=ExtResource("3_cedcw")]
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
 collision_layer = 32

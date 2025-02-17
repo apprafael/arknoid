@@ -13,5 +13,8 @@ func _on_death_zone_body_entered(body: Node2D) -> void:
 		body.queue_free()
 
 func _on_timer_reset_timeout() -> void:
+	GameManager.update_record()
+	GameManager.reset_score()
+	GameManager.reset_lives()
 	get_tree().reload_current_scene()
 	GameManager.started = false

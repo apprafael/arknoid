@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1vr8prijka5v"]
+
+[ext_resource type="FontFile" uid="uid://df6vddfy14dmg" path="res://Fonts/Flatwheat-Regular.ttf" id="1_afm7s"]
+[ext_resource type="Script" path="res://Scripts/hud.gd" id="1_xesuw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8nvit"]
+font = ExtResource("1_afm7s")
+font_size = 20
+shadow_size = 4
+shadow_color = Color(0.0196078, 0.0666667, 0.0196078, 0.988235)
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xesuw")
+
+[node name="LabelScore" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 127.0
+offset_bottom = 25.0
+text = "Score: "
+label_settings = SubResource("LabelSettings_8nvit")
+
+[node name="LabelRecord" type="Label" parent="."]
+offset_left = 512.0
+offset_right = 585.0
+offset_bottom = 25.0
+text = "Record: "
+label_settings = SubResource("LabelSettings_8nvit")
+
+[node name="LabelLives" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 127.0
+offset_bottom = 473.0
+text = "lives: "
+label_settings = SubResource("LabelSettings_8nvit")
