@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://caxp46vei8bne"]
+[gd_scene load_steps=9 format=3 uid="uid://caxp46vei8bne"]
 
 [ext_resource type="Texture2D" uid="uid://yerjahql4k5n" path="res://Sprites/Background.png" id="1_d1fyt"]
 [ext_resource type="Script" path="res://Scripts/environment.gd" id="1_jir7d"]
+[ext_resource type="Shader" path="res://Shaders/background.gdshader" id="2_iiuay"]
 [ext_resource type="PackedScene" uid="uid://d1vr8prijka5v" path="res://Scenes/hud.tscn" id="3_cedcw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v8ifh"]
+shader = ExtResource("2_iiuay")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqs7v"]
 size = Vector2(20, 481)
@@ -17,6 +21,8 @@ size = Vector2(674, 20)
 script = ExtResource("1_jir7d")
 
 [node name="Background" type="Sprite2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_v8ifh")
 texture = ExtResource("1_d1fyt")
 centered = false
 

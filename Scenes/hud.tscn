@@ -13,6 +13,8 @@ shadow_color = Color(0.0196078, 0.0666667, 0.0196078, 0.988235)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_xesuw")
+metadata/_edit_vertical_guides_ = [128.0]
+metadata/_edit_horizontal_guides_ = [288.0]
 
 [node name="LabelScore" type="Label" parent="."]
 layout_mode = 0
@@ -23,6 +25,7 @@ text = "Score: "
 label_settings = SubResource("LabelSettings_8nvit")
 
 [node name="LabelRecord" type="Label" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_right = 585.0
 offset_bottom = 25.0
@@ -30,6 +33,7 @@ text = "Record: "
 label_settings = SubResource("LabelSettings_8nvit")
 
 [node name="LabelLives" type="Label" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 448.0
 offset_right = 127.0
