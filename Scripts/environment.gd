@@ -8,6 +8,7 @@ func _on_death_zone_body_entered(body: Node2D) -> void:
 			GameManager.lives -= 1
 			body.reset_position()
 		else:
+			GameManager.lives = 0
 			time_reset.start()
 	else:
 		body.queue_free()
